@@ -50,7 +50,8 @@
 
 ### System Design
 
-<!-- Add your architecture diagram here -->
+<img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/d9c9cc89-7b5e-4ce8-ab32-32d77f66fbc2" />
+
 
 ### Architecture Components
 
@@ -118,6 +119,9 @@
 
 ### 4. Orchestration
 
+<img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/5da2772c-7321-406b-a05e-2227490d2ff7" />
+
+
 **AWS Step Functions** orchestrates the entire pipeline as a state machine, ensuring each component executes in the correct sequence with built-in error handling.
 
 **Workflow Steps:**
@@ -147,7 +151,8 @@
 
 ### Dashboard Overview
 
-![InsightFlow Dashboard](path/to/dashboard-image.png)
+<img width="641" height="494" alt="Screenshot 2025-11-13 at 5 17 52 PM" src="https://github.com/user-attachments/assets/ebb75f0c-bae6-4b8b-abba-98820dde0899" />
+
 *Interactive Tableau dashboard showing key supply chain metrics and performance indicators*
 
 ### Pipeline Performance
