@@ -5,7 +5,7 @@
 [![AWS](https://img.shields.io/badge/AWS-Glue%20%7C%20S3%20%7C%20Athena-FF9900?style=flat&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
 [![PySpark](https://img.shields.io/badge/PySpark-3.4-E25A1C?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
 [![ETL](https://img.shields.io/badge/ETL-End--to--End-00C853?style=flat)](https://github.com)
-
+[![ETL](https://img.shields.io/badge/ETL-End--to--End-00C853?style=flat)](https://github.com)
 ---
 
 ## 📘 Overview
@@ -214,10 +214,6 @@
 
 - **Dataset:** [DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 - **Attribution:** Fabian Constante, Fernando Silva, Antônio Pereira - Instituto Politécnico de Leiria
-- **DOI:** 10.17632/8gx2fvg2k6.5
-- **Course:** Cloud Computing for Data Analytics (Milestone 7)
-- **Institution:** Northeastern University
-- **Date:** December 7, 2024
 
 ---
 
