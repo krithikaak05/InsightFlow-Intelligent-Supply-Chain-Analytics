@@ -104,12 +104,25 @@
 
 ### 4. Orchestration
 
+*AWS Step Functions** orchestrates the entire pipeline as a state machine, ensuring each component executes in the correct sequence with built-in error handling.
+
 <img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/dd16dec6-0896-41a5-b358-0ba6ff8a0a50" />
 
-AWS Step Functions manages workflow:
-- Crawler execution → ETL Job 1 → ETL Job 2
-- Automated error handling and retry logic
-- CloudWatch monitoring and alerts
+**Workflow Steps:**
+
+1. **Start Crawler**: Scans S3 raw data and discovers table schemas
+2. **Wait & Check Status**: Polls every 60 seconds until crawler completes
+3. **Start ETL Job 1**: Triggers dimension table creation with PySpark transformations
+4. **Wait & Check Status**: Monitors job progress until dimensions are ready
+5. **Start ETL Job 2**: Joins dimensions to build the fact table with aggregated metrics
+6. **Wait & Check Status**: Ensures fact table creation completes successfully
+7. **Workflow Complete**: Pipeline ready for analytics queries
+
+**Key Features:**
+- **Sequential Dependencies**: Ensures crawler finishes before ETL jobs start, dimensions ready before fact table
+- **Automated Error Handling**: Retries transient failures, alerts on persistent errors
+- **Real-Time Monitoring**: CloudWatch logs track execution times and success/failure rates
+- **Conditional Logic**: Checks completion status at each stage before proceeding
 ---
 
 ## 📊 Key Results
