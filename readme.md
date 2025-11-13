@@ -177,24 +177,10 @@ AWS Step Functions manages workflow:
 
 ---
 
-## 👥 Project Team
-
-**Group 17**
-
-| Name | Role | Contact |
-|------|------|---------|
-| **Krithika Annaswamy Kannan** | Data Engineer & ETL Architect | annaswamykannan.k@northeastern.edu |
-| **Abhiram Varanasi** | Data Analyst & BI Developer | varanasi.a@northeastern.edu |
-
----
-
 ## 📚 References
 
 - **Dataset:** [DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 - **Attribution:** Fabian Constante, Fernando Silva, Antônio Pereira - Instituto Politécnico de Leiria
-- **DOI:** 10.17632/8gx2fvg2k6.5
-- **Course:** Cloud Computing for Data Analytics (Milestone 7)
-- **Institution:** Northeastern University
 - **Date:** December 7, 2024
 
 ---
