@@ -110,12 +110,6 @@ AWS Step Functions manages workflow:
 - Crawler execution → ETL Job 1 → ETL Job 2
 - Automated error handling and retry logic
 - CloudWatch monitoring and alerts
-
-### 5. Analytics
-- Parquet files stored in S3 processed zone
-- Glue Catalog updated with new schemas
-- Amazon Athena enables SQL-based analytics
-
 ---
 
 ## 📊 Key Results
