@@ -4,8 +4,9 @@
 
 [![AWS](https://img.shields.io/badge/AWS-Glue%20%7C%20S3%20%7C%20Athena-FF9900?style=flat&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
 [![PySpark](https://img.shields.io/badge/PySpark-3.4-E25A1C?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
+[![Tableau](https://img.shields.io/badge/Tableau-Desktop-E97627?style=flat&logo=tableau&logoColor=white)](https://www.tableau.com/)
 [![ETL](https://img.shields.io/badge/ETL-End--to--End-00C853?style=flat)](https://github.com)
-[![ETL](https://img.shields.io/badge/ETL-End--to--End-00C853?style=flat)](https://github.com)
+
 ---
 
 ## 📘 Overview
