@@ -35,11 +35,9 @@
 
 ### System Design
 
-<img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/1643785a-e835-41cc-90f5-5ef0efb8a53c" />
+<img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/ef5239c3-1347-4da4-be2e-efd646326388" />
 
-
-### Components
-
+### Architecture Components
 
 | Layer | AWS Service | Purpose |
 |-------|-------------|---------|
@@ -49,6 +47,7 @@
 | **Transformation** | AWS Glue (PySpark) | Distributed data cleaning, deduplication, and aggregation |
 | **Orchestration** | AWS Step Functions | Workflow automation and job dependency management |
 | **Analytics** | Amazon Athena | Serverless SQL query engine for ad-hoc analysis |
+| **Visualization** | Tableau Desktop | Interactive dashboards and business intelligence reports |
 | **Security** | IAM + CloudWatch | Access control, logging, and pipeline monitoring |
 
 ---
@@ -80,11 +79,13 @@
 ## ⚙️ ETL Pipeline Workflow
 
 ### 1. Data Ingestion
+
 - Upload CSV files to S3 raw zone
 - AWS Glue Crawler scans and catalogs schemas
 - Metadata registered in Glue Data Catalog
 
 ### 2. Dimension Table Creation (ETL Job 1)
+
 **PySpark Transformations:**
 - Remove duplicates with `SELECT DISTINCT`
 - Handle NULL values with `COALESCE()`
@@ -94,6 +95,7 @@
 **Output:** 4 dimension tables stored as Parquet files with Snappy compression
 
 ### 3. Fact Table Aggregation (ETL Job 2)
+
 **Business Logic:**
 - Join all dimension tables
 - Calculate aggregated metrics (total sales, profit, discounts)
@@ -104,12 +106,11 @@
 
 ### 4. Orchestration
 
-*AWS Step Functions** orchestrates the entire pipeline as a state machine, ensuring each component executes in the correct sequence with built-in error handling.
+<img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/7d82d362-5a4f-4617-b913-79f6b44eecf4" />
 
-<img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/dd16dec6-0896-41a5-b358-0ba6ff8a0a50" />
+**AWS Step Functions** orchestrates the entire pipeline as a state machine, ensuring each component executes in the correct sequence with built-in error handling.
 
 **Workflow Steps:**
-
 1. **Start Crawler**: Scans S3 raw data and discovers table schemas
 2. **Wait & Check Status**: Polls every 60 seconds until crawler completes
 3. **Start ETL Job 1**: Triggers dimension table creation with PySpark transformations
@@ -123,9 +124,16 @@
 - **Automated Error Handling**: Retries transient failures, alerts on persistent errors
 - **Real-Time Monitoring**: CloudWatch logs track execution times and success/failure rates
 - **Conditional Logic**: Checks completion status at each stage before proceeding
+
 ---
 
 ## 📊 Key Results
+
+### Dashboard Overview
+
+<img width="641" height="494" alt="Screenshot 2025-11-13 at 5 17 52 PM" src="https://github.com/user-attachments/assets/4ce26cce-78e0-4691-869d-f9ea2f0acc51" />
+
+*Interactive Tableau dashboard showing key supply chain metrics and performance indicators*
 
 ### Pipeline Performance
 - ✅ **100% data ingestion** success across all 4 source files
@@ -139,17 +147,30 @@
 | KPI | Value | Insight |
 |-----|-------|---------|
 | **Products Ordered** | 334,107 | Total units processed |
-| **Gross Sales** | $32.3M | Revenue generated |
-| **Net Profit** | $377K | Bottom-line profitability |
+| **Gross Sales** | $32,314,681.23 | Revenue generated |
+| **Net Profit** | $377,390.65 | Bottom-line profitability |
 | **Orders Placed** | 65,752 | Transaction volume |
 | **Avg Shipping Days** | ~4 days | Fulfillment speed |
+| **Late Deliveries** | 33,423 | Orders delayed across all modes |
 
-### Key Findings
+### Key Findings (via Tableau Dashboard)
+
 - 🏆 **Consumer segment** contributes 51% of net profit
-- 🚚 **Standard class** shipping has highest late delivery rate
-- 📉 **Fishing category** shows -12% profit margin (requires review)
-- ⚡ **Top 5 products** drive 40% of total revenue
-- 📦 **Large orders** (10+ units) account for 28% of revenue
+- 🚚 **Standard class** shipping has highest late delivery rate (~55%)
+- 📉 **Fishing category** shows lowest profit margin (0.142 vs avg 2.282)
+- ⚡ **Top 5 products** drive significant revenue:
+  - Fire Safe: $3.5M+
+  - Exercise Equipment: $3.2M+
+  - Bike: $2.8M+
+  - Kayak: $2.5M+
+  - Football Shoes: $2.3M+
+- 📦 **On-time delivery** varies by mode: First Class (48%), Same Day (52%), Second Class (50%), Standard (55%)
+
+**Dashboard Features:**
+- Interactive filters for Quarter, Year, Shipping Mode, Product Category
+- Drill-down capabilities from customer to product level
+- Real-time visualizations: profit margins, delivery performance, sales trends
+- Treemap for profit margin analysis across categories
 
 ---
 
@@ -193,6 +214,9 @@
 
 - **Dataset:** [DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 - **Attribution:** Fabian Constante, Fernando Silva, Antônio Pereira - Instituto Politécnico de Leiria
+- **DOI:** 10.17632/8gx2fvg2k6.5
+- **Course:** Cloud Computing for Data Analytics (Milestone 7)
+- **Institution:** Northeastern University
 - **Date:** December 7, 2024
 
 ---
