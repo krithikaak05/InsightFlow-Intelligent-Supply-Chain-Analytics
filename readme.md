@@ -38,7 +38,7 @@
 <img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/1643785a-e835-41cc-90f5-5ef0efb8a53c" />
 
 
-### Architecture 
+### Components
 
 
 | Layer | AWS Service | Purpose |
