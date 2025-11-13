@@ -9,6 +9,20 @@
 
 ---
 
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Business Objectives](#-business-objectives)
+- [Architecture](#️-architecture)
+- [Data Model](#-data-model)
+- [ETL Pipeline Workflow](#️-etl-pipeline-workflow)
+- [Key Results](#-key-results)
+- [Security & Governance](#-security--governance)
+- [Future Enhancements](#-future-enhancements)
+- [References](#-references)
+
+---
+
 ## 📘 Overview
 
 **InsightFlow** is an end-to-end serverless ETL pipeline built on AWS that processes **185K+ supply chain transactions** to deliver real-time insights into delivery performance, operational efficiency, and profitability.
@@ -36,7 +50,7 @@
 
 ### System Design
 
-<img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/ef5239c3-1347-4da4-be2e-efd646326388" />
+<!-- Add your architecture diagram here -->
 
 ### Architecture Components
 
@@ -80,13 +94,11 @@
 ## ⚙️ ETL Pipeline Workflow
 
 ### 1. Data Ingestion
-
 - Upload CSV files to S3 raw zone
 - AWS Glue Crawler scans and catalogs schemas
 - Metadata registered in Glue Data Catalog
 
 ### 2. Dimension Table Creation (ETL Job 1)
-
 **PySpark Transformations:**
 - Remove duplicates with `SELECT DISTINCT`
 - Handle NULL values with `COALESCE()`
@@ -96,7 +108,6 @@
 **Output:** 4 dimension tables stored as Parquet files with Snappy compression
 
 ### 3. Fact Table Aggregation (ETL Job 2)
-
 **Business Logic:**
 - Join all dimension tables
 - Calculate aggregated metrics (total sales, profit, discounts)
@@ -106,8 +117,6 @@
 **Output:** `fact_sales` table with comprehensive business metrics
 
 ### 4. Orchestration
-
-<img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/7d82d362-5a4f-4617-b913-79f6b44eecf4" />
 
 **AWS Step Functions** orchestrates the entire pipeline as a state machine, ensuring each component executes in the correct sequence with built-in error handling.
 
@@ -126,14 +135,19 @@
 - **Real-Time Monitoring**: CloudWatch logs track execution times and success/failure rates
 - **Conditional Logic**: Checks completion status at each stage before proceeding
 
+### 5. Analytics
+- Parquet files stored in S3 processed zone
+- Glue Catalog updated with new schemas
+- Amazon Athena enables SQL-based analytics
+- **Tableau Desktop** connects to Athena for interactive dashboard visualizations
+
 ---
 
 ## 📊 Key Results
 
 ### Dashboard Overview
 
-<img width="641" height="494" alt="Screenshot 2025-11-13 at 5 17 52 PM" src="https://github.com/user-attachments/assets/4ce26cce-78e0-4691-869d-f9ea2f0acc51" />
-
+![InsightFlow Dashboard](path/to/dashboard-image.png)
 *Interactive Tableau dashboard showing key supply chain metrics and performance indicators*
 
 ### Pipeline Performance
@@ -155,7 +169,6 @@
 | **Late Deliveries** | 33,423 | Orders delayed across all modes |
 
 ### Key Findings (via Tableau Dashboard)
-
 - 🏆 **Consumer segment** contributes 51% of net profit
 - 🚚 **Standard class** shipping has highest late delivery rate (~55%)
 - 📉 **Fishing category** shows lowest profit margin (0.142 vs avg 2.282)
@@ -172,6 +185,7 @@
 - Drill-down capabilities from customer to product level
 - Real-time visualizations: profit margins, delivery performance, sales trends
 - Treemap for profit margin analysis across categories
+- Time-series analysis of shipping days across months
 
 ---
 
