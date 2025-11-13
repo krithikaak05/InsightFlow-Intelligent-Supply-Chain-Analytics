@@ -35,9 +35,11 @@
 
 ### System Design
 
-<!-- Add your architecture diagram here -->
+<img width="732" height="369" alt="Screenshot 2025-11-13 at 5 00 16 PM" src="https://github.com/user-attachments/assets/1643785a-e835-41cc-90f5-5ef0efb8a53c" />
 
-### Architecture Components
+
+### Architecture 
+
 
 | Layer | AWS Service | Purpose |
 |-------|-------------|---------|
@@ -101,6 +103,9 @@
 **Output:** `fact_sales` table with comprehensive business metrics
 
 ### 4. Orchestration
+
+<img width="358" height="487" alt="Screenshot 2025-11-13 at 5 00 06 PM" src="https://github.com/user-attachments/assets/dd16dec6-0896-41a5-b358-0ba6ff8a0a50" />
+
 AWS Step Functions manages workflow:
 - Crawler execution → ETL Job 1 → ETL Job 2
 - Automated error handling and retry logic
