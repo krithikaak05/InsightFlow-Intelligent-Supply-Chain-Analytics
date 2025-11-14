@@ -18,7 +18,7 @@
 - [ETL Pipeline Workflow](#️-etl-pipeline-workflow)
 - [Key Results](#-key-results)
 - [Security & Governance](#-security--governance)
-- [Repository Structure](#-repository-structure)
+- [Repository Files](#-repository-files)
 - [Future Enhancements](#-future-enhancements)
 - [References](#-references)
 
@@ -213,7 +213,9 @@
 - Audit trails via CloudWatch and Athena query history
 
 ---
+
 ## 📂 Repository Files
+
 ```
 ├── AWS_STEP_FUNCTION_ORCHESTRATION.png
 ├── AWS_SYSTEM_DESIGN.png
