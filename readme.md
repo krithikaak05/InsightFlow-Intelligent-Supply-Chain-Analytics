@@ -18,6 +18,7 @@
 - [ETL Pipeline Workflow](#️-etl-pipeline-workflow)
 - [Key Results](#-key-results)
 - [Security & Governance](#-security--governance)
+- [Repository Structure](#-repository-structure)
 - [Future Enhancements](#-future-enhancements)
 - [References](#-references)
 
