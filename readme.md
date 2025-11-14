@@ -20,6 +20,7 @@
 - [Security & Governance](#-security--governance)
 - [Future Enhancements](#-future-enhancements)
 - [References](#-references)
+- [Repository Files] (#-repository-files)
 
 ---
 
@@ -236,6 +237,18 @@
 - **Attribution:** Fabian Constante, Fernando Silva, Antônio Pereira - Instituto Politécnico de Leiria
 
 ---
+
+## 📂 Repository Files
+
+- **AWS_STEP_FUNCTION_ORCHESTRATION.png** — Step Function orchestration diagram  
+- **AWS_SYSTEM_DESIGN.png** — System design architecture  
+- **Data.zip** — Dataset used for pipeline  
+- **ETL_JOB1.py** — Python ETL Job 1  
+- **ETL_JOB2.py** — Python ETL Job 2  
+- **TABLEAU_DASHBOARD.png** — Tableau dashboard output  
+- **TransformationsQueries_ETL.sql** — SQL transformation logic  
+- **readme.md** — Documentation  
+
 
 <div align="center">
 
