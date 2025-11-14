@@ -20,7 +20,6 @@
 - [Security & Governance](#-security--governance)
 - [Future Enhancements](#-future-enhancements)
 - [References](#-references)
-- [Repository Files] (#-repository-files)
 
 ---
 
@@ -239,6 +238,15 @@
 ---
 
 ## 📂 Repository Files
+
+├── AWS_STEP_FUNCTION_ORCHESTRATION.png
+├── AWS_SYSTEM_DESIGN.png
+├── Data.zip
+├── ETL_JOB1.py
+├── ETL_JOB2.py
+├── TABLEAU_DASHBOARD.png
+├── TransformationsQueries_ETL.sql
+└── readme.md
 
 - **AWS_STEP_FUNCTION_ORCHESTRATION.png** — Step Function orchestration diagram  
 - **AWS_SYSTEM_DESIGN.png** — System design architecture  
