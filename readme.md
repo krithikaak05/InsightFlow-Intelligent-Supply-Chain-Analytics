@@ -213,7 +213,6 @@
 - Audit trails via CloudWatch and Athena query history
 
 ---
-
 ## 📂 Repository Files
 ```
 ├── AWS_STEP_FUNCTION_ORCHESTRATION.png
