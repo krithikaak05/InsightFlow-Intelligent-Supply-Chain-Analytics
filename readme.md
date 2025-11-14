@@ -238,7 +238,7 @@
 ---
 
 ## 📂 Repository Files
-
+```
 ├── AWS_STEP_FUNCTION_ORCHESTRATION.png
 ├── AWS_SYSTEM_DESIGN.png
 ├── Data.zip
@@ -247,7 +247,7 @@
 ├── TABLEAU_DASHBOARD.png
 ├── TransformationsQueries_ETL.sql
 └── readme.md
-
+```
 - **AWS_STEP_FUNCTION_ORCHESTRATION.png** — Step Function orchestration diagram  
 - **AWS_SYSTEM_DESIGN.png** — System design architecture  
 - **Data.zip** — Dataset used for pipeline  
