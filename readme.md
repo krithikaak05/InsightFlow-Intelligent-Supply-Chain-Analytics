@@ -213,6 +213,28 @@
 
 ---
 
+## 📂 Repository Files
+```
+├── AWS_STEP_FUNCTION_ORCHESTRATION.png
+├── AWS_SYSTEM_DESIGN.png
+├── Data.zip
+├── ETL_JOB1.py
+├── ETL_JOB2.py
+├── TABLEAU_DASHBOARD.png
+├── TransformationsQueries_ETL.sql
+└── readme.md
+```
+- **AWS_STEP_FUNCTION_ORCHESTRATION.png** — Step Function orchestration diagram  
+- **AWS_SYSTEM_DESIGN.png** — System design architecture  
+- **Data.zip** — Dataset used for pipeline  
+- **ETL_JOB1.py** — Python ETL Job 1  
+- **ETL_JOB2.py** — Python ETL Job 2  
+- **TABLEAU_DASHBOARD.png** — Tableau dashboard output  
+- **TransformationsQueries_ETL.sql** — SQL transformation logic  
+- **readme.md** — Documentation  
+
+---
+
 ## 🔮 Future Enhancements
 
 **Phase 2 Roadmap:**
@@ -236,27 +258,6 @@
 - **Attribution:** Fabian Constante, Fernando Silva, Antônio Pereira - Instituto Politécnico de Leiria
 
 ---
-
-## 📂 Repository Files
-```
-├── AWS_STEP_FUNCTION_ORCHESTRATION.png
-├── AWS_SYSTEM_DESIGN.png
-├── Data.zip
-├── ETL_JOB1.py
-├── ETL_JOB2.py
-├── TABLEAU_DASHBOARD.png
-├── TransformationsQueries_ETL.sql
-└── readme.md
-```
-- **AWS_STEP_FUNCTION_ORCHESTRATION.png** — Step Function orchestration diagram  
-- **AWS_SYSTEM_DESIGN.png** — System design architecture  
-- **Data.zip** — Dataset used for pipeline  
-- **ETL_JOB1.py** — Python ETL Job 1  
-- **ETL_JOB2.py** — Python ETL Job 2  
-- **TABLEAU_DASHBOARD.png** — Tableau dashboard output  
-- **TransformationsQueries_ETL.sql** — SQL transformation logic  
-- **readme.md** — Documentation  
-
 
 <div align="center">
 
